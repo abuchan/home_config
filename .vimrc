@@ -7,3 +7,4 @@ set tabstop=2
 set shiftwidth=2
 set cinkeys=0{,0},:,0#,!^F
 colorscheme desert
+set pastetoggle=<F2>
