@@ -132,7 +132,8 @@ if !exists("stanza_no_builtin_highlight")
 endif
 
 " string literals with escapes
-syn region stanzaString start="\"[^"]" skip="\\\"" end="\"" contains=scalaStringEscape
+syn region stanzaString start="\"" skip="\\\"" end="\"" contains=stanzaStringEscape
+syn region stanzaBlockString start="\\<S>" skip="\"" end="<S>" contains=stanzaStringEscape
 syn match stanzaStringEscape "\\u[0-9a-fA-F]\{4}" contained
 syn match stanzaStringEscape "\\[nrfvb\\\"\']" contained
 
@@ -167,6 +168,7 @@ if version >= 508 || !exists("did_stanza_syn_inits")
   HiLink stanzaScopeDecl    Keyword
   HiLink stanzaTodo         Todo
   HiLink stanzaString       String
+  HiLink stanzaBlockString  String
   HiLink stanzaRawString    String
   HiLink stanzaEscape       Special
   HiLink stanzaChar         Character

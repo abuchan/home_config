@@ -11,7 +11,7 @@ set pastetoggle=<F2>
 set spelllang=en_us
 
 " Comment this line to turn off spell check by default
-set spell
+"set spell
 
 
 autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
