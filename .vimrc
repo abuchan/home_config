@@ -13,6 +13,11 @@ set spelllang=en_us
 " Comment this line to turn off spell check by default
 "set spell
 
-
-autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
-autocmd BufRead,BufNewFile *.launch setfiletype roslaunch
+augroup filetypes
+  autocmd! 
+  autocmd BufRead,BufNewFile *.ino setlocal filetype=arduino
+  autocmd BufRead,BufNewFile *.launch setlocal filetype=roslaunch
+  autocmd BufRead,BufNewFile *.si setlocal filetype=stanza
+  autocmd BufRead,BufNewFile *.oi setlocal filetype=stanza
+  autocmd BufRead,BufNewFile *.ti setlocal filetype=stanza
+augroup END
